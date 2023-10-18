@@ -42,6 +42,18 @@
     animation: light-to-dark 0.5s ease-in-out;
 }
 
+@media (prefers-color-scheme: dark){
+    #login_form{
+        background-color: #fff;
+        color: red;
+    }
+
+    .dark#login_form{
+        background-color: rgb(230, 119, 15);
+        color: yellow;
+    }
+}
+
 #form_header {
     display: flex;
     align-items: center;
