@@ -45,7 +45,7 @@
 @media (prefers-color-scheme: dark){
     #login_form{
         background-color: #fff;
-        color: red;
+        color: yellow;
     }
 
     .dark#login_form{
