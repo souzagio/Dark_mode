@@ -1,4 +1,4 @@
-@import url();
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
     --color_light-50: #f8fafc;
@@ -11,6 +11,180 @@
     --color-purple-100: #a855f7;
     --color-purple-200: #bf46ef;
 
-    --color-gradient: linear-gradient(90deg, var(var(--color-purple-50)), var(var(--color-purple-100)), var(var(--color-purple-200)))
+    --color-gradient: linear-gradient(90deg, var(--color-purple-50), var(--color-purple-100), var(--color-purple-200));
 }
 
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    height: 100vh;
+    width: 100%;
+    background: var(--color-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login_form{
+    background-color: var(--color_light-50);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 8px;
+    gap: 20px;
+    box-shadow: 5px 5px 8px rgba(0,0,0, 0.336);
+    animation: light-to-dark 0.5s ease-in-out;
+}
+
+#form_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#form_header h1{
+    font-size: 2.2em;
+    position: relative;
+
+    &::before{
+        position: absolute;
+        content: '';
+        width: 40%;
+        height: 3px;
+        background-color: var(--color-purple-50);
+        bottom: 10px;
+        border-radius: 5px;
+    }
+}
+
+#mode_icon{
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+
+#social_media{
+    font-size: 35px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#i_fb{
+    color: rgb(25, 77, 126);
+}
+
+#i_gg{
+    color: rgb(255, 30, 0);
+}
+
+#i_git{
+    color: #312d37;
+}
+
+#inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.input-box{
+    font-size: 14px;
+    color: var(--color-dark-50);
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 3px;
+    cursor: text;
+    border-bottom: 1px solid var(--color-purple-50);
+}
+
+.input-field i{
+    font-size: 18px;
+    color: var(--color-dark-900);
+}
+
+.input-field input{
+    border: none;
+    background-color: transparent;
+    width: 330px;
+    font-size: 17px;
+    padding: 0 5px;
+
+    &:focus{
+        outline: none;
+    }
+}
+
+#social_media a:hover{
+    transform: scale(1.2);
+}
+
+#forgot_password a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: var(--color-dark-50);
+    padding-top: 8px;
+    &:hover{
+        color: var(--color-purple-50);
+    }
+}
+
+#login_btn{
+    border: none;
+    background: var(--color-gradient);
+    padding: 7px;
+    font-size: 18px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: var(--color_light-50);
+    cursor: pointer;
+
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+
+.dark#login_form{
+    color: var(--color_light-50);
+    background-color: var(--color-dark-100);
+    animation: dark-to-light 0.3s ease-in-out;
+}
+
+.dark#login_form .input-field input, .dark#login_form .input-field i{
+    color: var(--color_light-50);
+}
+
+.dark#login_form #i_git{
+    color: var(--color_light-50);
+}
+
+@keyframes dark-to-light{
+    to{
+        background-color: var(--color-dark-100);
+    }
+
+    from{
+        background-color: var(--color_light-50);
+    }
+}
+
+@keyframes light-to-dark{
+    to{
+        background-color: var(--color_light-50);
+    }
+
+    from{
+        background-color: var(--color-dark-100);
+    }
+}
