@@ -42,7 +42,7 @@
     animation: light-to-dark 0.5s ease-in-out;
 }
 
-@media (prefers-color-scheme: dark){
+@media (prefers-color-scheme: light){
     #login_form{
         background-color: #fff;
         color: yellow;
